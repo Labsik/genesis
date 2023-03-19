@@ -15,7 +15,6 @@ import { StyledCard, StyledCardActions, StyledCardHeader } from "../../styled";
 import { StyledCardContent } from "../styled";
 import { convertDuration } from "../../utils";
 
-
 interface CourseCardProps {
   course: ICourse;
 }
@@ -73,7 +72,6 @@ export const CourseCard = ({ course }: CourseCardProps) => {
           <Typography gutterBottom variant="body1">
             {course.lessonsCount} lessons
           </Typography>
-
 
           <Stack spacing={1}>
             <Rating

@@ -51,7 +51,7 @@ export default <Components<Theme>>{
         fontSize: "1.2rem",
         fontWeight: 300,
         overflowX: "hidden",
-        textAlign: 'center',
+        textAlign: "center",
       },
       button: {
         fontFamily: "Nunito Sans, sans-serif",

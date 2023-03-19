@@ -63,10 +63,7 @@ export const CourseInfo = ({ course }: CourseInfoProps) => {
       <Typography variant="h4" mb={3}>
         Lessons
       </Typography>
-      <StyledGrid
-        container
-        spacing={3}
-      >
+      <StyledGrid container spacing={3}>
         {lessonsContent}
       </StyledGrid>
     </div>

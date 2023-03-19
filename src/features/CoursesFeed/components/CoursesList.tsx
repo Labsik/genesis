@@ -47,10 +47,7 @@ export const CoursesList = () => {
       {loading && <Loader />}
       {error && <ErrorBox />}
       {!loading && !!courses.length && (
-        <StyledGrid
-          container
-          spacing={3}
-        >
+        <StyledGrid container spacing={3}>
           {content}
         </StyledGrid>
       )}
