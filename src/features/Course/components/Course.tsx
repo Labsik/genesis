@@ -9,7 +9,7 @@ import { CourseInfo } from "./CourseInfo";
 export const Course = () => {
   const { course, loading, error } = useAppSelector(getCourses);
   const dispatch = useAppDispatch();
-  const shouldLog = useRef(true);
+  const shouldLog = useRef<boolean>(true);
   const { courseId } = useParams();
 
   useEffect(() => {

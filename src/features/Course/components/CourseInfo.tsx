@@ -29,6 +29,10 @@ export const CourseInfo = ({ course }: CourseInfoProps) => {
     lesson && setLessonInfo(lesson);
   };
 
+  console.log("course", course);
+
+  console.log("lessonInfo", lessonInfo);
+
   useEffect(() => {
     const openLesonData = course.lessons.find(
       (item) => item.order === playLesson
@@ -57,7 +61,14 @@ export const CourseInfo = ({ course }: CourseInfoProps) => {
           <Typography variant="h6" mb={3}>
             You're watching lesson #{lessonInfo.order}
           </Typography>
-          <VideoPlayer videoLink={lessonInfo.link} lessonId={lessonInfo.id} />
+
+          {!!lessonInfo.link ? (
+            <VideoPlayer videoLink={lessonInfo.link} lessonId={lessonInfo.id} />
+          ) : (
+            <Typography variant="h6">
+              Sorry, this lesson doesn't have the video. Pick another one
+            </Typography>
+          )}
         </Box>
       )}
       <Typography variant="h4" mb={3}>

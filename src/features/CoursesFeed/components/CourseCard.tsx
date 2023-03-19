@@ -37,9 +37,11 @@ export const CourseCard = ({ course }: CourseCardProps) => {
         onMouseOver={() => setIsHover(true)}
         onMouseOut={() => setIsHover(false)}
       >
-        {isHover && !!videoLink?.link ? (
+        {isHover && !!videoLink?.link && (
           <VideoPlayer isHovered={true} videoLink={videoLink.link} />
-        ) : (
+        )}
+
+        {!isHover && (
           <CardMedia
             component="img"
             sx={{ boxSizing: "border-box" }}

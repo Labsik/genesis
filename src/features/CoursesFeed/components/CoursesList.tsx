@@ -9,8 +9,8 @@ import { scrollToTop } from "../../utils";
 import { StyledGrid } from "../../styled";
 
 export const CoursesList = () => {
-  const shouldLog = useRef(true);
-  const [page, setPage] = useState(1);
+  const shouldLog = useRef<boolean>(true);
+  const [page, setPage] = useState<number>(1);
   const { courses, loading, error } = useAppSelector(getCourses);
 
   const coursesPerPage = 10;

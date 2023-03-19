@@ -7,6 +7,7 @@ import { Header } from "./components";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 import { StyledAppWrap } from "./styled";
+import { SnackbarProvider } from "notistack";
 
 function App() {
   return (
@@ -14,11 +15,17 @@ function App() {
       <BrowserRouter>
         <Provider store={store}>
           <ThemeProvider theme={muiTheme}>
-            <StyledAppWrap>
-              <CssBaseline />
-              <Header />
-              <AppRoutes />
-            </StyledAppWrap>
+            <SnackbarProvider
+              anchorOrigin={{ horizontal: "right", vertical: "top" }}
+              maxSnack={3}
+              autoHideDuration={3000}
+            >
+              <StyledAppWrap>
+                <CssBaseline />
+                <Header />
+                <AppRoutes />
+              </StyledAppWrap>
+            </SnackbarProvider>
           </ThemeProvider>
         </Provider>
       </BrowserRouter>
