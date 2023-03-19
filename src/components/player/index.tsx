@@ -15,8 +15,8 @@ const VideoPlayer = ({ videoLink, lessonId, isHovered }: VideoPlayerProps) => {
   const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
 
   useEffect(() => {
-    const savedTime = localStorage.getItem(`lesson-${lessonId}-time`);
-    const startTime = savedTime ? parseInt(savedTime, 10) : 0;
+    const videoTime = localStorage.getItem(`lesson-${lessonId}-time`);
+    const startTime = videoTime ? parseInt(videoTime, 10) : 0;
 
     if (videoRef.current && Hls.isSupported()) {
       const video = videoRef.current;
@@ -56,12 +56,12 @@ const VideoPlayer = ({ videoLink, lessonId, isHovered }: VideoPlayerProps) => {
             : styles.fullVideo
         }
         style={{ display: isLoading ? "block" : "none" }}
+        onClick={handleFullScreen}
         component="video"
         muted
         controls
         ref={videoRef}
         onTimeUpdate={handleTime}
-        onClick={handleFullScreen}
       ></Box>
       {!isLoading && (
         <Box sx={styles.loadingVideo}>

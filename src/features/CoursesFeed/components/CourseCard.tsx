@@ -1,51 +1,20 @@
 import React, { useState } from "react";
 import {
   Box,
-  Card,
   Stack,
   Rating,
-  CardHeader,
-  CardActions,
-  CardContent,
   CardMedia,
   Button,
   Typography,
-  styled,
 } from "@mui/material";
 
 import { ICourse } from "../../../store/courses";
 import { useNavigate } from "react-router-dom";
 import VideoPlayer from "../../../components/player";
+import { StyledCard, StyledCardActions, StyledCardHeader } from "../../styled";
+import { StyledCardContent } from "../styled";
+import { convertDuration } from "../../utils";
 
-export const StyledCard = styled(Card)({
-  width: "100%",
-  maxWidth: "100%",
-  minWidth: "100%",
-  maxHeight: "100%",
-  boxSizing: "border-box",
-  minHeight: "100%",
-});
-
-export const StyledCardMedia = styled(CardMedia)({});
-
-export const StyledCardContent = styled(CardContent)(({ theme }) => ({
-  maxHeight: "100%",
-  height: "230px",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  textAlign: "initial",
-  [theme.breakpoints.down("md")]: {
-    height: "350px",
-    marginBottom: "20px",
-  },
-}));
-
-export const StyledCardActions = styled(CardActions)({
-  padding: "1rem",
-});
-
-export const StyledBoxInfo = styled(Box)({});
 
 interface CourseCardProps {
   course: ICourse;
@@ -64,7 +33,7 @@ export const CourseCard = ({ course }: CourseCardProps) => {
 
   return (
     <StyledCard>
-      <CardHeader sx={{ height: "100px" }} title={course.title} />
+      <StyledCardHeader title={course.title} />
       <Box
         onMouseOver={() => setIsHover(true)}
         onMouseOut={() => setIsHover(false)}
@@ -87,6 +56,10 @@ export const CourseCard = ({ course }: CourseCardProps) => {
         </Typography>
 
         <Typography gutterBottom variant="body1">
+          Duration: {convertDuration(course.duration)}
+        </Typography>
+
+        <Typography gutterBottom variant="body1">
           Skills: {skills.length > 0 ? skills : "-"}
         </Typography>
 
@@ -100,6 +73,7 @@ export const CourseCard = ({ course }: CourseCardProps) => {
           <Typography gutterBottom variant="body1">
             {course.lessonsCount} lessons
           </Typography>
+
 
           <Stack spacing={1}>
             <Rating

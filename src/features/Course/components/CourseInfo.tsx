@@ -4,10 +4,18 @@ import { Grid, Box, Typography } from "@mui/material";
 import { ILesson, ISingleCourse } from "../../../store/courses";
 import { LessonCard } from "./LessonCard";
 import VideoPlayer from "../../../components/player";
+import { StyledGrid } from "../../styled";
 
 interface CourseInfoProps {
   course: ISingleCourse;
 }
+
+// const StyledGrid = styled(Grid)({
+//   justifyContent:"space-between",
+//   alignItems:"center",
+//   gap: 3,
+//   marginBottom: 3
+// })
 
 export const CourseInfo = ({ course }: CourseInfoProps) => {
   const [playLesson, setPlayLesson] = useState<number>(1);
@@ -55,15 +63,12 @@ export const CourseInfo = ({ course }: CourseInfoProps) => {
       <Typography variant="h4" mb={3}>
         Lessons
       </Typography>
-      <Grid
+      <StyledGrid
         container
-        justifyContent="space-between"
-        alignItems="center"
         spacing={3}
-        mb={3}
       >
         {lessonsContent}
-      </Grid>
+      </StyledGrid>
     </div>
   );
 };

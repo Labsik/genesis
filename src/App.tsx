@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { AppRoutes } from "./routes";
 import { BrowserRouter } from "react-router-dom";
@@ -11,7 +10,7 @@ import { StyledAppWrap } from "./styled";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <BrowserRouter>
         <Provider store={store}>
           <ThemeProvider theme={muiTheme}>
@@ -23,7 +22,7 @@ function App() {
           </ThemeProvider>
         </Provider>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 

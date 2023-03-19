@@ -6,6 +6,7 @@ import { ErrorBox, Loader } from "../../../components";
 import { CourseCard } from "./CourseCard";
 import { Grid, Pagination } from "@mui/material";
 import { scrollToTop } from "../../utils";
+import { StyledGrid } from "../../styled";
 
 export const CoursesList = () => {
   const shouldLog = useRef(true);
@@ -46,16 +47,12 @@ export const CoursesList = () => {
       {loading && <Loader />}
       {error && <ErrorBox />}
       {!loading && !!courses.length && (
-        <Grid
+        <StyledGrid
           container
-          justifyContent="space-between"
-          alignItems="center"
           spacing={3}
-          // sx={{ marginBottom: "3rem" }}
-          mb={3}
         >
           {content}
-        </Grid>
+        </StyledGrid>
       )}
 
       {!loading && !!courses.length && (
