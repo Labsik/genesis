@@ -10,13 +10,6 @@ interface CourseInfoProps {
   course: ISingleCourse;
 }
 
-// const StyledGrid = styled(Grid)({
-//   justifyContent:"space-between",
-//   alignItems:"center",
-//   gap: 3,
-//   marginBottom: 3
-// })
-
 export const CourseInfo = ({ course }: CourseInfoProps) => {
   const [playLesson, setPlayLesson] = useState<number>(1);
   const [lessonInfo, setLessonInfo] = useState<ILesson>();
