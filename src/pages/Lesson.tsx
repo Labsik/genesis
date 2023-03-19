@@ -1,8 +1,11 @@
-import React from 'react'
-import { StyledPageWrap } from '../styled'
+import React from "react";
+import { Course } from "../features";
+import { StyledPageWrap } from "../styled";
 
 export const Lesson = () => {
   return (
-    <StyledPageWrap>Lesson</StyledPageWrap>
-  )
-}
+    <StyledPageWrap>
+      <Course />
+    </StyledPageWrap>
+  );
+};

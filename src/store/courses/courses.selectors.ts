@@ -1,4 +1,4 @@
-import { ICoursesState } from './courses.types';
+import { ICoursesState } from "./courses.types";
 import { coursesStoreKey } from "./courses.const";
 
 interface State {
@@ -7,4 +7,4 @@ interface State {
 
 const select = (state: State) => state[coursesStoreKey];
 
-export const getCourses = (state: State) => select(state)
+export const getCourses = (state: State) => select(state);

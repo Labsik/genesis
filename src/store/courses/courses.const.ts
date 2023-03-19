@@ -1,1 +1,1 @@
-export const coursesStoreKey = 'courses'
+export const coursesStoreKey = "courses";

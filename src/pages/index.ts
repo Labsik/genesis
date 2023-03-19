@@ -1,2 +1,2 @@
-export * from './Courses'
-export * from './Lesson'
+export * from "./Courses";
+export * from "./Lesson";

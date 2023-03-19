@@ -1,2 +1,2 @@
-export * from './axios'
-export * from './courses'
+export * from "./axios";
+export * from "./courses";

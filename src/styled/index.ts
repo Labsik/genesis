@@ -1,2 +1,2 @@
-export * from './StyledAppWrap'
-export * from './StyledPageWrap'
+export * from "./StyledAppWrap";
+export * from "./StyledPageWrap";
