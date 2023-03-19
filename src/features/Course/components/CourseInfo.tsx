@@ -29,10 +29,6 @@ export const CourseInfo = ({ course }: CourseInfoProps) => {
     lesson && setLessonInfo(lesson);
   };
 
-  console.log("course", course);
-
-  console.log("lessonInfo", lessonInfo);
-
   useEffect(() => {
     const openLesonData = course.lessons.find(
       (item) => item.order === playLesson
