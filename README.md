@@ -8,6 +8,7 @@ The course page displays the course information and a list of lessons
 
 The lesson is clickable, user can watch the lesson. Also user can watch video in 'picture in picture' regime and navigate acroos the application
 
+You can see the application here: [Genesis app](https://labsik.github.io/genesis/)
 
 # Getting Started with Create React App
 
