@@ -1,7 +1,6 @@
 import { Box, CircularProgress } from "@mui/material";
 import Hls from "hls.js";
 import { useEffect, useRef, useState } from "react";
-import { useSnackbar } from "notistack";
 import { styles } from "./ styled";
 
 interface VideoPlayerProps {
@@ -14,7 +13,6 @@ const VideoPlayer = ({ videoLink, lessonId, isHovered }: VideoPlayerProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
-  const { enqueueSnackbar } = useSnackbar();
 
   useEffect(() => {
     const videoTime = localStorage.getItem(`lesson-${lessonId}-time`);
@@ -31,15 +29,10 @@ const VideoPlayer = ({ videoLink, lessonId, isHovered }: VideoPlayerProps) => {
           setIsLoading(true);
         });
       });
-      hls.on(Hls.Events.ERROR, () => {
-        enqueueSnackbar(`Can't play the video`, {
-          variant: "error",
-        });
-      });
     } else if (videoRef.current?.canPlayType("application/vnd.apple.mpegurl")) {
       videoRef.current.src = videoLink;
     }
-  }, [videoLink, lessonId, enqueueSnackbar]);
+  }, [videoLink, lessonId]);
 
   const handleTime = (): void => {
     const video = videoRef.current;

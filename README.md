@@ -1,3 +1,14 @@
+## Project Description
+
+The application is a platform for watching educational videos. Application built with: React, Typescript, Redux Toolkit and Material UI.
+
+The main page displays a list of courses with information and a course preview image.
+
+The course page displays the course information and a list of lessons
+
+The lesson is clickable, user can watch the lesson. Also user can watch video in 'picture in picture' regime and navigate acroos the application
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
