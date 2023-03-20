@@ -1,7 +1,7 @@
 import React from "react";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { AppRoutes } from "./routes";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { muiTheme } from "./theme/theme";
 import { Header } from "./components";
 import { Provider } from "react-redux";
@@ -12,7 +12,7 @@ import { SnackbarProvider } from "notistack";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Provider store={store}>
           <ThemeProvider theme={muiTheme}>
             <SnackbarProvider
@@ -28,7 +28,7 @@ function App() {
             </SnackbarProvider>
           </ThemeProvider>
         </Provider>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
