@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/genesis/static/css/main.e6c13ad2.css",
+    "main.js": "/genesis/static/js/main.4e0d60df.js",
+    "static/js/787.711141dc.chunk.js": "/genesis/static/js/787.711141dc.chunk.js",
+    "index.html": "/genesis/index.html",
+    "main.e6c13ad2.css.map": "/genesis/static/css/main.e6c13ad2.css.map",
+    "main.4e0d60df.js.map": "/genesis/static/js/main.4e0d60df.js.map",
+    "787.711141dc.chunk.js.map": "/genesis/static/js/787.711141dc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.4e0d60df.js"
+  ]
+}
